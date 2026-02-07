@@ -128,45 +128,82 @@ function back() {
 		height: 100%;
 
 		.image {
-			//absolute filling the screen
-			width: fit-content;
+			// centered image with better positioning
+			width: auto;
 			height: 60vh;
 			aspect-ratio: 9 / 16;
 			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			margin: auto;
+			top: 8vh;
+			left: 50%;
+			transform: translateX(-50%);
 			object-fit: cover;
-			border-radius: 10px;
-			border: 2px solid #ff6b6b;
+			border-radius: 16px;
+			border: 3px solid rgba(255, 107, 107, 0.8);
 			box-sizing: border-box;
-			filter: drop-shadow(0 0 5px rgba(255, 107, 107, 0.5));
+			filter: drop-shadow(0 12px 30px rgba(255, 107, 107, 0.2));
+			z-index: 1;
 		}
 
 		h1 {
-			font-size: 1rem;
+			font-size: 1.1rem;
+			line-height: 1.4;
 		}
 
 		.col {
-			//posision absolute bottom, width: 80vw; height: 20vh;
-			//background transparent white, with black border, text is a color that works on it
+			// improved bottom message panel
 			position: absolute;
-			bottom: 2vh;
-			width: 80vw;
+			bottom: 3vh;
+			left: 50%;
+			transform: translateX(-50%);
+			width: min(90vw, 600px);
 			height: fit-content;
-			background-color: rgba(255, 255, 255, 0.8);
-			border: 2px solid black;
+			background: rgba(255, 255, 255, 0.95);
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			border: 1px solid rgba(0, 0, 0, 0.08);
+			border-radius: 20px;
+			padding: 1.5rem 1.75rem;
+			box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15), 
+			            0 8px 20px rgba(0, 0, 0, 0.08);
 			display: flex;
+			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			left: 0;
-			right: 0;
-			margin: auto;
-			padding: 2vh;
+			gap: 1.25rem;
 			box-sizing: border-box;
-			border-radius: 2vh;
+			z-index: 10;
+
+			h1 {
+				font-size: 1.1rem;
+				font-weight: 600;
+				line-height: 1.5;
+				color: #111;
+				margin: 0;
+				text-align: center;
+				padding: 0 0.5rem;
+			}
+
+			button {
+				padding: 0.85rem 2.5rem;
+				font-size: 1.15rem;
+				font-weight: 600;
+				border: none;
+				border-radius: 14px;
+				background: linear-gradient(135deg, #ff6b6b 0%, #ff4c4c 100%);
+				color: white;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				box-shadow: 0 8px 20px rgba(255, 76, 76, 0.25);
+
+				&:hover {
+					transform: translateY(-2px);
+					box-shadow: 0 12px 28px rgba(255, 76, 76, 0.35);
+				}
+
+				&:active {
+					transform: translateY(0);
+				}
+			}
 		}
 
 	}
