@@ -8,9 +8,12 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 export default defineConfig({
   plugins: [
     vue(),
-    vueDevTools(),
+    // vueDevTools(),
   ],
   base: '/please/',
+  build: {
+    outDir: 'docs', // output to docs/ so GitHub Pages can serve from the repo's docs folder
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
