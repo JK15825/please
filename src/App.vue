@@ -78,6 +78,7 @@ function back() {
 		font-family: 'Arial', sans-serif;
 		color: black;
 		padding: 0 20px;
+		margin: 0;
 	}
 
 	& .imageCarousel {
@@ -128,12 +129,13 @@ function back() {
 		height: 100%;
 
 		.image {
-			// centered image with better positioning
+			// mobile-friendly image sizing
 			width: auto;
-			height: 60vh;
+			height: 50vh;
+			max-height: 55vh;
 			aspect-ratio: 9 / 16;
 			position: absolute;
-			top: 8vh;
+			top: 2vh;
 			left: 50%;
 			transform: translateX(-50%);
 			object-fit: cover;
@@ -145,47 +147,49 @@ function back() {
 		}
 
 		h1 {
-			font-size: 1.1rem;
-			line-height: 1.4;
+			font-size: 1rem;
+			line-height: 1.35;
+			margin: 0;
+			padding: 0;
 		}
 
 		.col {
-			// improved bottom message panel
+			// compact mobile message panel
 			position: absolute;
-			bottom: 3vh;
+			bottom: 1.5vh;
 			left: 50%;
 			transform: translateX(-50%);
-			width: min(90vw, 600px);
+			width: min(92vw, 600px);
 			height: fit-content;
 			background: rgba(255, 255, 255, 0.95);
 			backdrop-filter: blur(10px);
 			-webkit-backdrop-filter: blur(10px);
 			border: 1px solid rgba(0, 0, 0, 0.08);
-			border-radius: 20px;
-			padding: 1.5rem 1.75rem;
-			box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15), 
-			            0 8px 20px rgba(0, 0, 0, 0.08);
+			border-radius: 18px;
+			padding: 1rem 1.25rem;
+			box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15),
+				0 8px 20px rgba(0, 0, 0, 0.08);
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			gap: 1.25rem;
+			gap: 0.85rem;
 			box-sizing: border-box;
 			z-index: 10;
 
 			h1 {
-				font-size: 1.1rem;
+				font-size: 1rem;
 				font-weight: 600;
-				line-height: 1.5;
+				line-height: 1.4;
 				color: #111;
 				margin: 0;
 				text-align: center;
-				padding: 0 0.5rem;
+				padding: 0 0.25rem;
 			}
 
 			button {
-				padding: 0.85rem 2.5rem;
-				font-size: 1.15rem;
+				padding: 0.7rem 2rem;
+				font-size: 1.05rem;
 				font-weight: 600;
 				border: none;
 				border-radius: 14px;
