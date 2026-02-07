@@ -44,6 +44,8 @@ function back() {
 
 			<div class="imageCarousel">
 				<img v-for="(img, idx) in images" :key="idx" :src="img" class="image" />
+				<!-- Duplicate images for seamless infinite scroll -->
+				<img v-for="(img, idx) in images" :key="'dup-' + idx" :src="img" class="image" />
 			</div>
 
 			<div class="col">
@@ -88,7 +90,7 @@ function back() {
 
 		.image {
 			width: fit-content;
-			height: 60vh;
+			height: 30vh;
 			aspect-ratio: 9 / 16;
 			object-fit: cover;
 			border-radius: 10px;
@@ -126,7 +128,10 @@ function back() {
 		align-items: center;
 		position: relative;
 		width: 100%;
-		height: 100%;
+		height: fit-content;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
 
 		.image {
 			// mobile-friendly image sizing
@@ -134,10 +139,7 @@ function back() {
 			height: 50vh;
 			max-height: 55vh;
 			aspect-ratio: 9 / 16;
-			position: absolute;
 			top: 2vh;
-			left: 50%;
-			transform: translateX(-50%);
 			object-fit: cover;
 			border-radius: 16px;
 			border: 3px solid rgba(255, 107, 107, 0.8);
@@ -155,10 +157,8 @@ function back() {
 
 		.col {
 			// compact mobile message panel
-			position: absolute;
 			bottom: 1.5vh;
 			left: 50%;
-			transform: translateX(-50%);
 			width: min(92vw, 600px);
 			height: fit-content;
 			background: rgba(255, 255, 255, 0.95);
