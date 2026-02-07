@@ -68,7 +68,7 @@ function back() {
 <style lang="scss">
 .mainContainer {
 	width: 100%;
-	height: 100%;
+	height: 80vh;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
@@ -230,5 +230,6 @@ html {
 	height: 100vh;
 	padding: 0;
 	margin: 0;
+	background-color: #ffd1dc;
 }
 </style>
