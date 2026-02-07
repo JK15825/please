@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Will You Be My Valentine? 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Step 1: Initial greeting -->
+        <div class="step active" id="step1">
+            <div class="hearts-background">
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+            </div>
+            <h1 class="fade-in">Hey There! 💕</h1>
+            <p class="fade-in delay-1">I have something special to share with you...</p>
+            <button class="btn" onclick="nextStep(2)">Continue</button>
+        </div>
+
+        <!-- Step 2: Picture section -->
+        <div class="step" id="step2">
+            <h2 class="fade-in">Us 💑</h2>
+            <div class="photo-frame fade-in delay-1">
+                <img src="couple-photo.jpg" alt="Us" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect width=%22300%22 height=%22300%22 fill=%22%23ffb3d9%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2224%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23fff%22%3EAdd Your Photo Here%3C/text%3E%3C/svg%3E'">
+            </div>
+            <p class="fade-in delay-2">Every moment with you is precious</p>
+            <button class="btn" onclick="nextStep(3)">Next</button>
+        </div>
+
+        <!-- Step 3: Sweet messages -->
+        <div class="step" id="step3">
+            <h2 class="fade-in">Things I Love About You 💖</h2>
+            <div class="love-list">
+                <div class="love-item fade-in delay-1">✨ Your beautiful smile</div>
+                <div class="love-item fade-in delay-2">💫 Your kindness</div>
+                <div class="love-item fade-in delay-3">🌟 Your laughter</div>
+                <div class="love-item fade-in delay-4">💝 Everything about you</div>
+            </div>
+            <button class="btn" onclick="nextStep(4)">Continue</button>
+        </div>
+
+        <!-- Step 4: The big question -->
+        <div class="step" id="step4">
+            <h1 class="big-question fade-in">Will You Be My Valentine? 💘</h1>
+            <div class="button-group">
+                <button class="btn btn-yes" id="yesBtn" onclick="selectAnswer('yes')">Yes! 💕</button>
+                <button class="btn btn-no" id="noBtn" onclick="selectAnswer('no')">Maybe...</button>
+            </div>
+        </div>
+
+        <!-- Step 5: Response -->
+        <div class="step" id="step5">
+            <div class="celebration">
+                <h1 class="fade-in">🎉 YAY! 🎉</h1>
+                <p class="fade-in delay-1">You just made me the happiest person! 💕</p>
+                <div class="hearts-explosion">
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
