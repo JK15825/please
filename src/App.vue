@@ -14,11 +14,12 @@ const images = ref<string[]>([
 
 const messages = ref<string[]>([
 	"I fell in love with you the first time we spent time together.",
-	"I've fallen in love with you more and more every day since.",
-	"I know moving isn't the best way to spend valentines day.",
-	"But I couldn't imaging doing it with anyone else.",
-	"Will you be my valentine?",
+	"And I've fallen more in love with you every day since.",
+	"I know moving isn’t the most romantic way to spend Valentine’s Day.",
+	"But I couldn’t imagine doing it with anyone else.",
+	"Will you be my Valentine?",
 ])
+
 
 function next() {
 	if (cur.value < 5) {
